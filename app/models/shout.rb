@@ -6,4 +6,10 @@ class Shout < ActiveRecord::Base
 	belongs_to  :content, polymorphic: true
   belongs_to 	:user
 
+  searchable do 
+  	text :content do 
+  		content.index
+  	end
+  end
+
 end

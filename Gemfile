@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'monban'
 gem 'monban-generators'
 gem 'paperclip'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 group :development, :test do
   gem 'byebug'

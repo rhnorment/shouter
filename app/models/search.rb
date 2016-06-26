@@ -8,17 +8,7 @@ class Search
 	end
 
 	def shouts
-		Shout.text_shouts.where(content_id: text_shouts)
+		Shout.search { fulltext term }.results
 	end
-
-	private
-
-		def text_shouts
-			TextShout.where("body LIKE ?", search_term)
-		end
-
-		def search_term
-			"%#{term}%"
-		end
 
 end
