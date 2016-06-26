@@ -18,8 +18,8 @@
 		<% end %>
 	</div>
 
-	<% if alert %>
-		<p><%= alert %></p>
+	<% flash.each do |key, value| %>
+		<p><%= value %></p>
 	<% end %>
 
 	<%= yield %>
